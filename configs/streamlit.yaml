@@ -1,0 +1,55 @@
+# for streamlit deployment
+
+# for home page
+home:
+  interface:
+    page_title: IT3385-MLOPS
+    page_icon: 🤖
+
+
+# for wheat page
+wheat:
+  model_path: saved_models/wheat # path to saved pycaret's pipeline, omit .pkl extension since pycaret load_model appends it for us
+
+  # interface text
+  interface:
+    page_title: Wheat Kernel Classifier
+    page_icon: 🌾
+
+  # features
+  features: [Area, Perimeter, Compactness, Length, Width, AsymmetryCoeff, Groove]
+  features_desc:
+    - Area of the Kernel
+    - Perimeter of the Kernel
+    - Measure of Kernel Compactness
+    - Length of the Kernel
+    - Width of the Kernel
+    - Asymmetry Coefficient of the Kernel
+    - Length of Kernel Groove
+
+  # default inputs on interface for wheat model
+  # same order as wheat.features
+  features_default:
+    - 11.84
+    - 13.21
+    - 0.85
+    - 5.18
+    - 2.84
+    - 3.6
+    - 5.04
+
+  # id to human labels (map numeric indices to class names)
+  id2label: [Kama, Rosa, Canadian]
+
+  # file path to dummy data for user to download
+  demo_data_fp: data/demo/wheat.csv
+
+
+# for melbourne page
+melbourne:
+  model_path: saved_models/melbourne.pkl
+
+
+# for used car prices page
+car_prices:
+  model_path: saved_models/car_price.pkl

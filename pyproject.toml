@@ -1,0 +1,36 @@
+[project]
+name = "it3385-mlops"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "choo tze hsuen",email = "shezanunicorn@gmail.com"}
+]
+readme = "README.md"
+requires-python = "=3.11.13"
+dependencies = [
+    "numpy (>=1.21,<1.27)",
+    "pandas (>=2.1.2,<2.2.2)",
+    "matplotlib (>=3.7.0,<4.0.0)",
+    "seaborn (>=0.13.2,<0.14.0)",
+    "pycaret (>=3.3.2,<4.0.0)",
+    "mlflow (>=3.3.1,<4.0.0)",
+    "xgboost (>=3.0.3,<4.0.0)",
+    "streamlit (>=1.49.0,<2.0.0)",
+]
+
+
+[tool.poetry]
+packages = [
+    { include = "src" }
+]
+
+
+[tool.poetry.group.dev.dependencies]
+dvc = "^3.62.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
