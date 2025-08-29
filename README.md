@@ -1,6 +1,6 @@
 # IT3385 Machine Learning Operations Assignment
 
-Visit the Streamlite here: [it3385-mlops-group4.streamlit.app](https://it3385-mlops-group4.streamlit.app)
+Visit the Streamlit here: [it3385-mlops-group4.streamlit.app](https://it3385-mlops-group4.streamlit.app)
 
 This document details the installation/deployment guide, for both local hosting and cloud hosting (on Streamlit).
 
@@ -104,8 +104,8 @@ After creating the environment, to start the streamlit server for UI inference.
 poetry run python -m streamlit run src/streamlit/Home.py
 ```
 
-![A screenshot showing a successful streamlit run](./.github/images/streamlit_run.png)
-Successful run.
+![A screenshot showing a successful streamlit run](./.github/images/run_streamlit.png)
+Successful streamlit run.
 
 The frotend server address is outputted to terminal (e.g. `http://localhost:8501`, your browser should automatically load up the page, otherwise manually keying in the address works too).
 

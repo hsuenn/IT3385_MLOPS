@@ -1,6 +1,8 @@
 # User Guide
 
-How to use the application.
+Visit the Streamlit here: [it3385-mlops-group4.streamlit.app](https://it3385-mlops-group4.streamlit.app)
+
+This document details how to use the application.
 
 ## Home Page
 The home page is where you can navigate to the respective sections of the app.
