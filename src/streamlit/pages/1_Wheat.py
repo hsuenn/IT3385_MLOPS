@@ -26,9 +26,9 @@ st.caption("Classify Wheat Types Based on Kernel Attributes Using a PyCaret Mach
 st.divider()
 
 # define model schema
-FEATURES = cfg.features
-FEATURES_DESC = cfg.features_desc # in same order
-FEATURES_DEFAULT = cfg.features_default
+FEATURES = cfg.model.features
+FEATURES_DESC = cfg.model.features_desc # in same order
+FEATURES_DEFAULT = cfg.model.features_default
 ID2MAP = cfg.id2label
 
 # offer two modes
