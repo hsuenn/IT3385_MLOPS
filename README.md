@@ -85,7 +85,7 @@ Install the project either with `git` or download the zip file archive from this
 git clone https://github.com/hsuenn/IT3385_MLOPS
 ```
 
-Alternatively, you may download the latest zipped relesaes at [/Release]()
+Alternatively, you may download the latest zipped release at [/releases](/releases/tag/stable).
 <hr>
 
 After getting poetry installed, install the necessary dependencies and packages:
