@@ -32,8 +32,11 @@ To install poetry (on Windows), as per [official doc](https://python-poetry.org/
 py -m pip install --user pipx
 pipx install poetry
 
-# NOTE: If pipx install poetry doesn't work, run the following then open a new terminal:
-py -m pipx ensurepath 
+# NOTE: If "pipx install poetry" does not work, run the following command: 
+py -m pipx ensurepath
+
+Open a new terminal and run the following command:
+pipx install poetry
 ```
 To install poetry (for Linux/MacOS), as per [official doc](https://python-poetry.org/docs/#installing-with-the-official-installer):
 ```
