@@ -18,9 +18,15 @@ This project offers multiple ways to get started.
 | Docker | [Docker setup](#docker-setup) |
 
 ## Source Setup
+> [!NOTE]
+> A terminal/shell session with Python binary is needed.
+> This can be in the form of `py`, `python` or `python3`, depending on your operating system and Python installation method.
+
 The project is packaged and managed by [poetry](https://python-poetry.org/).
 
 To install poetry (on Windows), as per [official doc](https://python-poetry.org/docs/#installing-with-the-official-installer):
+> [!TIP]
+> The following instructions reference the Python binary as `py`, switch out for `python` if your binary is named `python` instead (i.e. Python installed via Microsoft Store has a separate executable name than the one installed with the official installer).
 ```
 # recommend via pipx, install via pip if not yet installed
 py -m pip install --user pipx
