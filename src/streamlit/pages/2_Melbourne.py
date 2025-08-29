@@ -54,6 +54,9 @@ def log_predictions_to_disk(pred_df, model_fp, log_file_fp):
     # append model path key to pred_df
     pred_df["model_path"] = model_fp
 
+    # make directory
+    os.makedirs(os.path.dirname(log_file_fp), exist_ok=True) # create logs directory else .to_csv will complain later on
+
     # read current logs if any
     if os.path.exists(log_file_fp):
         # exists
@@ -188,9 +191,6 @@ with st.sidebar:
     model_path = st.text_input("MODEL_PATH", value="{}.pkl".format(default_model_path), placeholder="e.g., melbourne.pkl") # ask user to input `.pkl` extension for completenesss, will strip out later
 
     st.divider()
-    sample_csv = st.file_uploader("Upload SAMPLE CSV (optional, small file)", type=["csv"])
-
-    st.divider()
     log_predictions = st.toggle("Log predictions to CSV", value=True)
     if log_predictions:
         st.caption("Logging to {}".format(cfg.model.pred_log_path))
@@ -221,13 +221,20 @@ tab_single, tab_batch = st.tabs(["Single Prediction", "Batch Prediction (CSV)"])
 with tab_single:
     st.subheader("Input features")
 
+    sample_csv = st.file_uploader("Upload SAMPLE CSV (optional, small file, will populate the fields below according to first row present)", type=["csv"])
+    st.divider()
+
     user_df = None
     if sample_csv is not None:
         # user uploaded file
         user_df = pd.read_csv(sample_csv)
 
         # take first row, convert to single dict
-        user_df = user_df.iloc[0].to_dict()
+        if (len(user_df.index) >= 1):
+            # has content
+            user_df = user_df.iloc[0].to_dict()
+        else:
+            user_df = None # unset
 
     # build user input to allow user to modify submitted fields
     # otherwise, build user inputs from supplied defaults (in streamlit.yaml) for immediate prediction
