@@ -154,6 +154,12 @@ Streamlit automatically tracks the `production` branch and re-deploys whenever c
 
 ![Deployment configuration page on Streamlit](./.github/images/streamlit_deploy.png)
 
+
+![Screenshot of GitHub webhook](./.github/images/webhook.webp)
+
+This is achieved through the GitHub webhook feature where external services can be notified when certain events happen.
+
+
 # Project Structure
 The project follows the below structure.
 ```
