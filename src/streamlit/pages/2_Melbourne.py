@@ -37,14 +37,6 @@ st.set_page_config(
     layout="wide"
 )
 
-# reference custom CSS
-CUSTOM_CSS = ""
-with open(cfg.custom_css_fp, "r", encoding="utf-8") as f:
-    CUSTOM_CSS = f.read()
-
-# set custom style
-st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
-
 
 # helper function
 def log_predictions_to_disk(pred_df, model_fp, log_file_fp):
@@ -252,7 +244,7 @@ with tab_single:
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("#### Result")
 
-        st.metric("Prediction", "{:.4f}".format(pred_df["Predicted"].iloc[0]))
+        st.metric("Prediction", "${:.2f}".format(pred_df["Predicted"].iloc[0]))
 
     # log prediction if user toggled button
     if log_predictions:

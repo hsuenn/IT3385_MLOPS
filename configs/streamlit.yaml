@@ -51,19 +51,15 @@ melbourne:
 
   # interface text
   interface:
-    page_title: Melbourne Residential Pricing Prediction
-    page_icon: 🔮
-
-  # interface's custom css
-  custom_css_fp: src/streamlit/assets/melbourne_page.css
-
-  # interface's 
+    page_title: Melbourne Residential Pricing Predictor
+    page_icon: 🏠
 
   # features
   model:
     features: [Rooms, Distance, Landsize, BuildingArea, YearBuilt, Type, Method, Region, Bathroom, Car, Lattitude, Longtitude, Propertycount, YearSold, MonthSold, Suburb]
     pred_log_path: src/streamlit/logs/melbourne_pred_log.csv
 
+    # key: features.lower()
     features_range:
       rooms:
         default: 3
