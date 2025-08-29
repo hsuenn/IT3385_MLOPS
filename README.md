@@ -30,14 +30,15 @@ To install poetry (on Windows), as per [official doc](https://python-poetry.org/
 ```
 # recommend via pipx, install via pip if not yet installed
 py -m pip install --user pipx
-pipx install poetry
 
-# NOTE: If "pipx install poetry" does not work, run the following command: 
-py -m pipx ensurepath
-
-Open a new terminal and run the following command:
+# install poetry with pipx (recommended by poetry)
 pipx install poetry
 ```
+
+> [!TIP]
+> If `pipx` is still not recognised, please see [Troubleshooting Common Problems](#troubleshooting-common-problems). Otherwise, you may refer to their [official installation guide](https://pipx.pypa.io/stable/installation/).
+
+
 To install poetry (for Linux/MacOS), as per [official doc](https://python-poetry.org/docs/#installing-with-the-official-installer):
 ```
 curl -sSL https://install.python-poetry.org | python -
@@ -126,6 +127,15 @@ Model training code is found in `src/models/*/train.py`
 
 # Troubleshooting Common Problems
 
+> `pipx` is not recognized as an internal or external command, operable program, or batch file
+
+Here are some potential resolution for installing `pipx` on Windows
+- Ensure it's install globally with the `--user` (or `-U`) flag (e.g. `python -m pip install --user pipx`)
+- Ensure `pip` version is 19.0 or later (as specified in their [official installation guide](https://pipx.pypa.io/stable/installation/))
+- Restart your terminal session to reload your shell profile so that the `pipx` executable path is included in your search path (e.g. close and open a new terminal window)
+
+<hr>
+
 > OSError: dlopen(/pypoetry/virtualenvs/it3385-mlops-arMP4vTn-py3.11/lib/python3.11/site-packages/lightgbm/lib/lib_lightgbm.dylib, 0x0006): Library not loaded: @rpath/libomp.dylib
 
 On MacOS, you will need to install `libomp` as solved by a user here on [stackoverflow](https://stackoverflow.com/a/55958281)
@@ -134,4 +144,3 @@ On MacOS, you will need to install `libomp` as solved by a user here on [stackov
 brew install libomp
 ```
 
-<hr>
