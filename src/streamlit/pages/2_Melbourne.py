@@ -225,6 +225,9 @@ with tab_single:
         # user uploaded file
         user_df = pd.read_csv(sample_csv)
 
+        # take first row, convert to single dict
+        user_df = user_df.iloc[0].to_dict()
+
     # build user input to allow user to modify submitted fields
     # otherwise, build user inputs from supplied defaults (in streamlit.yaml) for immediate prediction
     cols = st.columns(3)
