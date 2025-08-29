@@ -132,7 +132,7 @@ def coerce_batch_schema(df):
     1. keeps only features required (drop unexpected columns)
     2. converts date column to YearSold and MonthSold (drops date column)
     3. fill in missing rows and columns with default values
-    4. re-oder columns to match training exactly
+    4. re-order columns to match training exactly
 
     returns
         formatted_df: pd.DataFrame, df ready for prediction
