@@ -85,7 +85,7 @@ Install the project either with `git` or download the zip file archive from this
 git clone https://github.com/hsuenn/IT3385_MLOPS
 ```
 
-Alternatively, you may download the latest zipped release at [/releases](https://github.com/hsuenn/IT3385_MLOPS/releases/tag/stable)
+Alternatively, you may download the latest zipped release at [/releases](https://github.com/hsuenn/IT3385_MLOPS/releases/tag/stable).
 <hr>
 
 After getting poetry installed, install the necessary dependencies and packages:
@@ -254,6 +254,7 @@ You may then proceed to copy the path to the python executable/binary file as ou
 
 E.g. `C:\Users\Tze Hsuen\AppData\Local\pypoetry\Cache\virtualenvs\it3385-mlops-a-750jKb-py3.11\Scripts\python.exe -m streamlit run src/streamlit/Home.py`
 
+![Screenshot of poetry env info](./.github/images/poetry_env_info.webp)
 Output of `poetry env info`, notice the `Executable` attribute of the `virtualenv`
 
 <hr>
