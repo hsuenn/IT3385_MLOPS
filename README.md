@@ -3,9 +3,9 @@
 Models and their respective team members
 | Name | Admin number | Model |
 | ---- | ------------ | ----- |
-| Choo Tze Hsuen | 2xxxxxM | Wheat type (classification)
-| Ian XXXX | 2xxxxxM | Melbourne residential prices (regression)
-| Aniq XXXXX | 2xxxxxM | Used car prices (regression)
+| Choo Tze Hsuen | 220926F | [Wheat Type (Classification)](/src/streamlit/pages/1_Wheat.py) |
+| Ian Chia Bing Jun | 230746D | [Melbourne Residential Prices (Regression)](/src/streamlit/pages/2_Melbourne.py) |
+| Muhammad Aniq Sufi Bin Ismail | 2232237W | [Used Car Prices (Regression)](/src/streamlit/pages/3_Used_Car_Prices.py) |
 
 
 # Startup
