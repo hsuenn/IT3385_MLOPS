@@ -32,10 +32,18 @@ curl -sSL https://install.python-poetry.org | python -
 ```
 <hr>
 
+Install the project either with `git` or download the zip file archive from this site directly.
+```
+git clone https://github.com/hsuenn/IT3385_MLOPS
+```
+
+Alternatively, you may download the latest zipped relesaes at [/Release]()
+<hr>
+
 After getting poetry installed, activate the environment (on Windows):
 ```
 # navigate into the directory
-cd IT3385-MLOPS
+cd IT3385_MLOPS
 poetry install
 $(poetry env activate)
 ```
@@ -43,7 +51,7 @@ $(poetry env activate)
 After getting poetry installed, activate the environment (on Linux/MacOS):
 ```
 # navigate into the directory
-cd IT3385-MLOPS
+cd IT3385_MLOPS
 poetry install
 $(poetry env activate)
 ```
@@ -92,7 +100,7 @@ docker build . --tags=tzehsuen/IT3385_MLOPS
 # Project Structure
 The project follows the below structure.
 ```
-IT3385-MLOPS
+IT3385_MLOPS
 |-- pyproject.toml
 |-- configs/
 |   |-- training.yaml
