@@ -151,5 +151,55 @@ melbourne:
 
 
 # for used car prices page
-car_prices:
-  model_path: saved_models/car_price.pkl
+used_car_prices:
+  model_path: saved_models/used_car_prices
+
+  # interface text
+  interface:
+    page_title: Used Car Price Predictor
+    page_icon: 🚗
+
+  # interface custom styling (path to file that contains the style element)
+  custom_styling_fp: src/streamlit/assets/used_car_prices.html
+
+  # file path of train metrics
+  train_metrics_fp: src/streamlit/assets/used_car_prices_training_metrics.json
+
+  # features
+  model:
+    features: [Location, Kilometers_Driven, Fuel_Type, Transmission, Owner_Type, Seats, Mileage_km_kg, Power_bhp, Car_Age]
+    cat_cols: [Location, Fuel_Type, Transmission, Owner_Type]
+    int_cols: [Kilometers_Driven, Seats, Car_Age]
+    float_cols: [Mileage_km_kg, Power_bhp]
+
+    # key: features.lower()
+    features_range:
+      location:
+        default: Mumbai
+        choices: [Mumbai, Hyderabad, Kochi, Coimbatore, Pune, Delhi, Kolkata, Chennai, Jaipur, Bangalore, Ahmedabad]
+      kilometers_driven:
+        default: 50000
+        range: [0]
+        step: 100
+      fuel_type:
+        default: Petrol
+        choices: [Petrol, Diesel, CNG, LPG, Electric]
+      transmission:
+        default: Manual
+        choices: [Manual, Automatic, Other]
+      owner_type:
+        default: First
+        choices: [First, Second, Third, Fourth & Above]
+      seats:
+        default: 5
+        choices: [2, 4, 5, 6, 7, 8, 9]
+      mileage_km_kg:
+        default: 18
+        range: [0]
+      power_bhp:
+        default: 90
+        range: [0]
+      car_age:
+        default: 10
+        range: [0]
+        step: 1
