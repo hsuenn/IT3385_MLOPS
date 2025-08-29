@@ -185,13 +185,12 @@ IT3385_MLOPS
 |           |-- 3_Used_Car_Prices.py
 |       |-- assets # custom styling, misc data
 |       |-- logs # to keep logging generated from interface and predictor
-| 
 ```
 
 > [!NOTE]
 > `poetry.lock` is pushed to version control as well, as per recommendations for applications developer here: [https://python-poetry.org/docs/basic-usage/#as-an-application-developer](https://python-poetry.org/docs/basic-usage/#as-an-application-developer)
 
-Config file stores the default values for the Streamlit app's pages, read by [`omegaconf`](https://pypi.org/project/omegaconf/).
+Config file stores the default values for the Streamlit app's pages, in `.yaml` form, read by [`omegaconf`](https://pypi.org/project/omegaconf/).
 
 
 # Troubleshooting Common Problems
@@ -236,7 +235,7 @@ Resolution steps:
 1. Run `poetry lock`
 2. Re-run `poetry install` next
 
-Alternatively, you may delete the generated `poetry.lock`, though not recommended, it should generate a new one again upon `poetry install`
+Alternatively (though not recommended), you may delete the generated `poetry.lock`, afterwards it should automatically generate a new one again upon `poetry install`
 
 <hr>
 
