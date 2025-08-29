@@ -1,12 +1,5 @@
 # for streamlit deployment
 
-# for home page
-home:
-  interface:
-    page_title: IT3385-MLOPS
-    page_icon: 🤖
-
-
 # for wheat page
 wheat:
   model_path: saved_models/wheat # path to saved pycaret's pipeline, omit .pkl extension since pycaret load_model appends it for us
