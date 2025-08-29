@@ -17,26 +17,27 @@ wheat:
     page_icon: 🌾
 
   # features
-  features: [Area, Perimeter, Compactness, Length, Width, AsymmetryCoeff, Groove]
-  features_desc:
-    - Area of the Kernel
-    - Perimeter of the Kernel
-    - Measure of Kernel Compactness
-    - Length of the Kernel
-    - Width of the Kernel
-    - Asymmetry Coefficient of the Kernel
-    - Length of Kernel Groove
+  model:
+    features: [Area, Perimeter, Compactness, Length, Width, AsymmetryCoeff, Groove]
+    features_desc:
+      - Area of the Kernel
+      - Perimeter of the Kernel
+      - Measure of Kernel Compactness
+      - Length of the Kernel
+      - Width of the Kernel
+      - Asymmetry Coefficient of the Kernel
+      - Length of Kernel Groove
 
-  # default inputs on interface for wheat model
-  # same order as wheat.features
-  features_default:
-    - 11.84
-    - 13.21
-    - 0.85
-    - 5.18
-    - 2.84
-    - 3.6
-    - 5.04
+    # default inputs on interface for wheat model
+    # same order as wheat.features
+    features_default:
+      - 11.84
+      - 13.21
+      - 0.85
+      - 5.18
+      - 2.84
+      - 3.6
+      - 5.04
 
   # id to human labels (map numeric indices to class names)
   id2label: [Kama, Rosa, Canadian]
