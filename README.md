@@ -2,6 +2,8 @@
 
 Visit the Streamlit here: [it3385-mlops-group4.streamlit.app](https://it3385-mlops-group4.streamlit.app)
 
+The GitHub repo can be found here: [https://github.com/hsuenn/IT3385_MLOPS](https://github.com/hsuenn/IT3385_MLOPS).
+
 This document details the installation/deployment guide, for both local hosting and cloud hosting (on Streamlit).
 
 Please see [User Guide](./docs/UserGuide.md) for instructions on how to use the application.
