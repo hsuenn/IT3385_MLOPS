@@ -26,7 +26,7 @@ def make_prediction(model, df):
 	model: sklearn.pipeline.Pipeline
 	df: pd.DataFrame
 
-	runs classification on supplied dataframe
+	runs prediction on supplied dataframe
 
 	returns
 		predictions: pd.DataFrame, cols=["Predicted"]

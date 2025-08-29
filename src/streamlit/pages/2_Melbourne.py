@@ -37,14 +37,6 @@ st.set_page_config(
     layout="wide"
 )
 
-# reference custom CSS
-CUSTOM_CSS = ""
-with open(cfg.custom_css_fp, "r", encoding="utf-8") as f:
-    CUSTOM_CSS = f.read()
-
-# set custom style
-st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
-
 
 # helper function
 def log_predictions_to_disk(pred_df, model_fp, log_file_fp):
@@ -140,7 +132,7 @@ def coerce_batch_schema(df):
     1. keeps only features required (drop unexpected columns)
     2. converts date column to YearSold and MonthSold (drops date column)
     3. fill in missing rows and columns with default values
-    4. re-oder columns to match training exactly
+    4. re-order columns to match training exactly
 
     returns
         formatted_df: pd.DataFrame, df ready for prediction
@@ -252,7 +244,7 @@ with tab_single:
         st.markdown('<div class="card">', unsafe_allow_html=True)
         st.markdown("#### Result")
 
-        st.metric("Prediction", "{:.4f}".format(pred_df["Predicted"].iloc[0]))
+        st.metric("Prediction", "${:.2f}".format(pred_df["Predicted"].iloc[0]))
 
     # log prediction if user toggled button
     if log_predictions:
