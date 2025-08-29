@@ -48,7 +48,106 @@ wheat:
 
 # for melbourne page
 melbourne:
-  model_path: saved_models/melbourne.pkl
+  model_path: saved_models/melbourne # path to saved pycaret's pipeline, omit .pkl extension since pycaret load_model appends it for us
+
+  # interface text
+  interface:
+    page_title: Melbourne Residential Pricing Prediction
+    page_icon: 🔮
+
+  # interface's custom css
+  custom_css_fp: src/streamlit/assets/melbourne_page.css
+
+  # interface's 
+
+  # features
+  model:
+    features: [Rooms, Distance, Landsize, BuildingArea, YearBuilt, Type, Method, Region, Bathroom, Car, Lattitude, Longtitude, Propertycount, YearSold, MonthSold, Suburb]
+    pred_log_path: src/streamlit/logs/melbourne_pred_log.csv
+
+    features_range:
+      rooms:
+        default: 3
+        range: [1, 10] # inclusive
+        step: 1
+        help: "Number of rooms"
+      distance:
+        default: 10.0
+        range: [0.0, 50.0]
+        step: 0.1
+        help: "km to CBD"
+      landsize:
+        default: 300.0
+        range: [0.0, 2000.0]
+        step: 1.0
+        help: "Land size"
+      buildingarea:
+        default: 150.0
+        range: [0.0, 1000.0]
+        step: 1.0
+        help: "Building size"
+      yearbuilt:
+        default: 1995
+        range: [1850, 2025]
+        step: 1
+        help: "Year in which property was built"
+      type:
+        default: "h"
+        choices: ["h", "t", "u"]
+        help: "h - house, cottage, villa, semi, terrace; t - townhouse; u - unit, duplex"
+      method:
+        default: "S"
+        choices: ["S", "SP", "PI", "VB"]
+        help: "S - property sold; SP - property sold prior; PI - property passed in; VB - vendor bid"
+      region:
+        default: "Northern Metropolitan"
+        choices:
+          - "Northern Metropolitan"
+          - "Western Metropolitan"
+          - "Southern Metropolitan"
+          - "Eastern Metropolitan"
+        help: "Region of property"
+      bathroom:
+        default: 1
+        range: [0, 10]
+        step: 1
+        help: "Number of bathrooms"
+      car:
+        default: 1
+        range: [0, 8]
+        step: 1
+        help: "Number of parking spots for cars"
+      lattitude:
+        default: -37.80
+        range: [-90.0, 90.0]
+        step: 0.0001
+        format: "%.4f"
+        help: "Latitude of property"
+      longtitude:
+        default: 144.96
+        range: [-180.0, 180.0]
+        step: 0.0001
+        format: "%.4f"
+        help: "Longtitude of property"
+      propertycount:
+        default: 5000
+        range: [0, 100000]
+        step: 10
+        help: "Number of properties that exist in  the suburb"
+      yearsold:
+        default: 2017
+        range: [2007, 2025]
+        step: 1
+        help: "Year of sale date"
+      monthsold:
+        default: 7
+        range: [1, 12]
+        step: 1
+        help: "Month of sale date"
+      suburb:
+        default: "Abbotsford"
+        help: "Suburb of the residential property"
+
 
 
 # for used car prices page
