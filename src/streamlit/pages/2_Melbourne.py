@@ -201,7 +201,7 @@ with st.sidebar:
 # -----------------------
 # Main layout
 # -----------------------
-st.title("🔮 Melbourne Housing Price Prediction")
+st.title("{} {}".format(cfg.interface.page_icon, cfg.interface.page_title))
 st.write("Enter feature values on the left, get instant predictions on the right.")
 
 # reference cached model
