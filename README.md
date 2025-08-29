@@ -3,18 +3,19 @@
 Models and their respective team members
 | Name | Admin number | Model |
 | ---- | ------------ | ----- |
-| Choo Tze Hsuen | 220926F | [Wheat Type (Classification)](/src/streamlit/pages/1_Wheat.py) |
-| Ian Chia Bing Jun | 230746D | [Melbourne Residential Prices (Regression)](/src/streamlit/pages/2_Melbourne.py) |
-| Muhammad Aniq Sufi Bin Ismail | 2232237W | [Used Car Prices (Regression)]() |
+| Choo Tze Hsuen | 2xxxxxM | Wheat type (classification)
+| Ian XXXX | 2xxxxxM | Melbourne residential prices (regression)
+| Aniq XXXXX | 2xxxxxM | Used car prices (regression)
 
 
 # Startup
 
+The project is packaged and managed by [peotry](https://python-poetry.org/).
 This project offers multiple ways to get started.
 | Method |   |
 | ------ | - |
-| Build from source | [Source setup]() |
-| Docker | [Docker setup]() |
+| Build from source | [Source setup](#source-setup) |
+| Docker | [Docker setup](#docker-setup) |
 
 ## Source Setup
 The project is packaged and managed by [poetry](https://python-poetry.org/).
@@ -27,8 +28,9 @@ pipx install poetry
 ```
 To install poetry (for Linux/MacOS), as per [official doc](https://python-poetry.org/docs/#installing-with-the-official-installer):
 ```
-curl -sSL https://install.python-poetry.org | python3 -
+curl -sSL https://install.python-poetry.org | python -
 ```
+<hr>
 
 After getting poetry installed, activate the environment (on Windows):
 ```
@@ -37,6 +39,7 @@ cd IT3385-MLOPS
 poetry install
 $(poetry env activate)
 ```
+
 After getting poetry installed, activate the environment (on Linux/MacOS):
 ```
 # navigate into the directory
@@ -44,25 +47,28 @@ cd IT3385-MLOPS
 poetry install
 $(poetry env activate)
 ```
-
+<hr>
 
 To verify the environment have been activated successfully (on Windows):
 ```
 poetry env info
-which python3
+which python
 ```
+
 To verify the environment have been activated successfully (on Linux/MacOs):
 ```
 poetry env info
 where python
 ```
 The `Executable` path shown by `poetry env info` should be exactly the same as path returned by `where python`, which shows where the current Python binary is stored at.
-
+<hr>
 
 After activating the environment, to start the streamlit server for UI inference.
 ```
-python3 -m streamlit run src/streamlit/Home.py
+python -m streamlit run src/streamlit/Home.py
 ```
+
+The frotend server address is outputted to terminal (e.g. `http://localhost:8501`, your browser should automatically load up the page, otherwise manually keying in the address works too).
 
 For common troubleshooting, please see [Troubleshooting Common Problems](#troubleshooting-common-problems).
 
@@ -107,3 +113,5 @@ On MacOS, you will need to install `libomp` as solved by a user here on [stackov
 ```
 brew install libomp
 ```
+
+<hr>
