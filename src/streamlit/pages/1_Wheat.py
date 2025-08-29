@@ -40,7 +40,9 @@ mode = st.sidebar.radio(
     ["Single Prediction", "Batch Prediction (CSV)"],
     index=0
 )
-st.caption("IT3385 AY2025 S1 • Task 3 — Real-Time Prediction App • Streamlit")
+st.sidebar.divider()
+st.sidebar.markdown("**About**")
+st.sidebar.caption("IT3385 AY2025 S1 • Task 3 — Real-Time Prediction App • Streamlit")
 
 
 if mode == "Single Prediction":

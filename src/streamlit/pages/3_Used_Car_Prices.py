@@ -111,6 +111,10 @@ with st.sidebar:
     mode = st.radio("Prediction mode", ["Single", "Batch (CSV)"], horizontal=False)
     st.info("Training features:\n[{}]".format(", ".join(FEATURES)))
 
+    st.divider()
+    st.markdown("**About**")
+    st.caption("IT3385 AY2025 S1 • Task 3 — Real-Time Prediction App • Streamlit")
+
 # SINGLE MODE
 if mode == "Single":
 
