@@ -88,9 +88,10 @@ def build_form_from_input(cols, values=None):
         feat_params = cfg.model.features_range[feat.lower()] # parameters for the features (e.g. default, range, step and help)
 
         # only use user-supplied value if type matches
-        default_value = \
-            (values and feat in values and type(values[feat]) == type(feat_params["default"])) \
-            or feat_params["default"] # use values first (e.g. user-supplied file) over pre-defined default values, TODO: sanity check input values
+        if (values and feat in values and type(values[feat]) == type(feat_params["default"])):
+            default_value = values[feat]
+        else:
+            default_value = feat_params["default"] # use values first (e.g. user-supplied file) over pre-defined default values, TODO: sanity check input values
 
         if (type(feat_params["default"]) in [int, float]):
             # numerical input
