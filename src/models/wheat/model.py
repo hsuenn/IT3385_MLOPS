@@ -4,15 +4,6 @@ loads pre-trained model
 import os
 from pycaret.classification import load_model, predict_model
 
-def create_model():
-	"""
-	create new classifier pipeline to train
-
-	returns
-		pipeline: sklearn.pipeline.Pipeline
-	"""
-	pass
-
 def get_model(model_path):
 	"""
 	model_path: str, path to model
