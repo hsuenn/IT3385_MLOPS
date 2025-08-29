@@ -26,8 +26,7 @@ def get_model(model_path):
 	assert os.path.exists("{}.pkl".format(model_path)), "Path to saved wheat pipeline {}.pkl not found".format(model_path)
 
 	# load model
-	print("MODEL PATH", model_path)
-	model = load_model("saved_models/wheat")
+	model = load_model(model_path)
 	return model
 
 
