@@ -181,6 +181,6 @@ else:
                     mime="text/csv",
                 )
 
-# foote
+# footer
 st.divider()
 st.caption("⚡ Built with PyCaret + Streamlit | Wheat Kernel Classification")
