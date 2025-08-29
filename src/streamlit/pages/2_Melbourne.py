@@ -54,6 +54,9 @@ def log_predictions_to_disk(pred_df, model_fp, log_file_fp):
     # append model path key to pred_df
     pred_df["model_path"] = model_fp
 
+    # make directory
+    os.makedirs(os.path.dirname(log_file_fp), exist_ok=True) # create logs directory else .to_csv will complain later on
+
     # read current logs if any
     if os.path.exists(log_file_fp):
         # exists
