@@ -97,7 +97,7 @@ cd IT3385_MLOPS
 poetry install
 ```
 ![A screenshot showing poetry install](./.github/images/poetry_install.png)
-`poetry install` installing dependencies automatically, based on `poetry.lock`
+`poetry install` installing dependencies automatically, based on `poetry.lock`.
 
 <hr>
 
@@ -161,7 +161,7 @@ Streamlit automatically tracks the `production` branch and re-deploys whenever c
 
 ![Screenshot of GitHub webhook](./.github/images/webhook.webp)
 
-This is achieved through the GitHub webhook feature where external services can be notified when certain events happen.
+This is achieved through the GitHub webhook feature where external services can be notified when certain events happen (e.g. on push changes to `production` branch.
 
 
 # Project Structure
@@ -218,7 +218,7 @@ Here are some potential resolution for installing `pipx` on Windows
 
 > OSError: dlopen(/pypoetry/virtualenvs/it3385-mlops-arMP4vTn-py3.11/lib/python3.11/site-packages/lightgbm/lib/lib_lightgbm.dylib, 0x0006): Library not loaded: @rpath/libomp.dylib
 
-On MacOS, you will need to install `libomp` as solved by a user here on [stackoverflow](https://stackoverflow.com/a/55958281)
+On MacOS, you will need to install `libomp` as solved by a user here on [stackoverflow](https://stackoverflow.com/a/55958281).
 
 ```
 brew install libomp
@@ -247,7 +247,7 @@ Resolution steps:
 1. Run `poetry lock`
 2. Re-run `poetry install` next
 
-Alternatively (though not recommended), you may delete the generated `poetry.lock`, afterwards it should automatically generate a new one again upon `poetry install`
+Alternatively (though not recommended), you may delete the generated `poetry.lock`, afterwards it should automatically generate a new one again upon `poetry install`.
 
 <hr>
 
@@ -266,7 +266,7 @@ You may then proceed to copy the path to the python executable/binary file as ou
 E.g. `C:\Users\Tze Hsuen\AppData\Local\pypoetry\Cache\virtualenvs\it3385-mlops-a-750jKb-py3.11\Scripts\python.exe -m streamlit run src/streamlit/Home.py`
 
 ![Screenshot of poetry env info](./.github/images/poetry_env_info.webp)
-Output of `poetry env info`, notice the `Executable` attribute of the `virtualenv`
+Output of `poetry env info`, notice the `Executable` attribute of the `virtualenv`.
 
 <hr>
 
