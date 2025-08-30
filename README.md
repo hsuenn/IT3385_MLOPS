@@ -9,6 +9,13 @@ This document details the installation/deployment guide, for both local hosting 
 Please see [User Guide](./docs/UserGuide.md) for instructions on how to use the application.
 
 
+## Contribution of Task 1 and Task 2 (Individual)
+- Choo Tze Hsuen \[[220926F_IT3385_Task1_2.ipynb](/src/models/wheat/220926F_IT3385_Task1_2.ipynb), [03_Wheat_Seeds.csv](/data/training/03_Wheat_Seeds.csv)\]
+- Ian Chia Bing Jun \[[Task1_Melbourne_EDA_230746D.ipynb](/src/models/melbourne/Task1_Melbourne_EDA_230746D.ipynb), [Task2_Melbourne_model_230746D.ipynb](/src/models/melbourne/Task2_Melbourne_model_230746D.ipynb), [Train_melbourne_clean.csv](/data/training/Train_melbourne_clean.csv)\]
+- Muhammad Aniq Sufi Bin Ismail \[[IT3385_Task1_EDA_232237W_AniqSufi.ipynb](/src/models/used_car_prices/IT3385_Task1_EDA_232237W_AniqSufi.ipynb), [IT3385_Task2_232237W_AniqSufi.ipynb](/src/models/used_car_prices/IT3385_Task2_232237W_AniqSufi.ipynb), [Used_Car_Prices_Model_Training.csv](/data/training/Used_Car_Prices_Model_Training.csv)\]
+
+To run the `jupyer notebook` server, please set up the environment as per [source setup](#source-setup) and run `poetry run python -m jupyer notebook` in the root directory of this project.
+
 
 Models developed by respective team members.
 | Name | Admin number | Model |
