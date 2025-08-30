@@ -117,6 +117,10 @@ Please see [User Guide](./docs/UserGuide.md) for instructions on how to use the 
 
 ## Docker Setup
 We've pushed a built image (built on amd64 architecture), to pull the built image from the Docker Hub, please run the following.
+
+![Screenshot of Docker Desktop showing the image has been pushed to Docker Hub](./.github/images/docker_hub.png)
+Successful push of built iamge to Docker Hub.
+
 ```
 # pull the image
 docker pull chootzehsuen/it3385_mlops
