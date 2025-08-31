@@ -126,14 +126,14 @@ Please see [User Guide](./docs/UserGuide.md) for instructions on how to use the 
 We've pushed a built image (built on amd64 architecture), to pull the built image from the Docker Hub, please run the following.
 
 ![Screenshot of Docker Desktop showing the image has been pushed to Docker Hub](./.github/images/docker_hub.png)
-Successful push of built iamge to Docker Hub.
+Successful push of built image to Docker Hub.
 
 ```
 # pull the image
 docker pull chootzehsuen/it3385_mlops
 
 # spin up a container
-docker run -p 8501:8501 chootzehsuen/it3385
+docker run -p 8501:8501 chootzehsuen/it3385_mlops
 ```
 
 Alternatively, you may build the docker image yourself if you are on a different cpu architecture.<br>
